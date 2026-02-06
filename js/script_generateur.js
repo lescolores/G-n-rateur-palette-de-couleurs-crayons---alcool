@@ -73,20 +73,39 @@ function PalettesDeCouleurs(Palette, nbPalettesSecondaires) {
         });
     }
 }
+
+// Harmonies de couleurs
+const Dicoharmonies = { // Banque des harmonies
+  "aleatoire": "Aléatoire",
+  "analogue": "Analogue",
+  "monochrome": "Monochrome",
+  "triade": "Triade",
+  "complementaire": "Complémentaire",
+  "complementaire-adjacent": "Complémentaire adjacent",
+  "tetrade": "Tétrade",
+  "carre": "Carré"
+};
+
 // window.onload dit que chaque fois que la page load, on appelle une fonction
 window.onload = function() {
     PalettesDeCouleurs(PalettePrincipale, 1)
-
     PalettesDeCouleurs(PalettesSecondaires, 3)
+    const dropdown = document.getElementById('harmonies-couleurs');
+        Object.entries(Dicoharmonies).forEach(([value, text]) => {
+        const option = document.createElement('option');
+        option.value = value;
+        option.text = text;
+        dropdown.appendChild(option);
+        });
 }
 
 // Bouton nombre de couleurs
-const btnMinus = document.querySelector('.btn-minus');
-const btnPlus = document.querySelector('.btn-plus');
-const valueDisplay = document.querySelector('.number-value');
+const btnMinus = document.querySelector('.btn-minus'); // Permet de faire -1
+const btnPlus = document.querySelector('.btn-plus'); // Permet de faire +1
+const valueDisplay = document.querySelector('.number-value'); // Affiche le nombre actuel
 
-const min = parseInt(valueDisplay.getAttribute('data-min'));
-const max = parseInt(valueDisplay.getAttribute('data-max'));
+const min = parseInt(valueDisplay.getAttribute('data-min')); // Mets un minimum
+const max = parseInt(valueDisplay.getAttribute('data-max')); // Mets un max
 
 btnPlus.addEventListener('click', () => {
     let current = parseInt(valueDisplay.textContent);
@@ -102,21 +121,17 @@ btnMinus.addEventListener('click', () => {
     }
 });
 
-document.getElementById('nb-couleurs').addEventListener('click', function() {
-  alert('Button was clicked!');
-});
-
 // Bouton harmonies de couleurs
-document.getElementById('harmonie-couleurs').addEventListener('click', function() {
-  alert('Button was clicked!');
+document.getElementById('harmonies-couleurs').addEventListener('change', function() {
+  alert('Ok ça a changé grosse bitch ' + this.value);
 });
 
-// Bouton générer une new palette
+// Bouton new palette
 document.getElementById('bouton-generer').addEventListener('click', function() {
-  alert('Button was clicked!');
+  location.reload();
 });
 
-// Bouton checkbox
-document.getElementById('checkbox-noir').addEventListener('click', function() {
-  alert('Button was clicked!');
+// Bouton new palette scroll
+document.getElementById('bouton-generer-scroll').addEventListener('click', function() {
+  location.reload();
 });

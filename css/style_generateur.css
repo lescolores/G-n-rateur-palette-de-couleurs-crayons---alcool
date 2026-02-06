@@ -138,56 +138,49 @@ h1, h2, h3, h4, h5, h6, p {
             position: relative;
             display: inline-block;
         }
-        .harmonie-trigger {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px 0;
-            cursor: pointer;
-        }
-        /*Sous-menu lorsque ouvert*/
-            .harmonie-couleurs {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: #ff0000; 
-                padding: 10px 0;
-                min-width: 220px;
-                z-index: 1000;
-                border-radius: 4px;
-                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            }
-            .harmonie-couleurs a { /* Liens du sous-menu */
-                color: #ffffff;
-                padding: 10px 20px;
-                text-decoration: none;
-                display: block;
-            }
-            .harmonie-couleurs a:hover { /* Hover des liens du sous-menu */
-                background-color: #f5f5f5;
-                color: #000000;
-            }
-            .dropdown:hover .harmonie-couleurs { /* Permet l'ouverture du sous-menu */
-                display: block;
-            }
-        
 
-            /*---Gestion des flèches---*/
-            .icone-fleche {
-                display: inline-block;
-                width: 16px;
-                height: 16px;
-                background-image: url('../images/fleche_bas.svg');
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            .dropdown:hover .icone-fleche {
-                background-image: url('../images/fleche_haut.svg');
-            }
+        /* Ton select qui sert maintenant de titre et de menu */
+        .icone-fleche {
+            display: block;
+            width: 100%;
+            min-width: 220px;
+            padding: 10px 30px 10px 0; /* Espace à droite pour la flèche */
+            font-weight: bold;
+            font-size: 16px;
+            color: #000000;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            background-image: url('../images/fleche_bas.svg');
+            background-size: 16px;
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+        /*---Gestion des flèches---*/
+        .icone-fleche:focus, .icone-fleche:active {
+            outline: none;
+            border: none;
+            background-image: url('../images/fleche_rouge.svg');
+            background-repeat: no-repeat;
+        }
+        .icone-fleche:hover {
+            background-image: url('../images/fleche_rouge.svg');
+        }
+        .icone-fleche option {
+            font-weight: normal;
+            color: #000000;
+            background-color: #ffffff;
+        }
+        .harmonie-couleurs a {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+        }
 
         /*---Nombre de couleurs---*/
         .nb-couleurs {

@@ -1,20 +1,27 @@
 À faire
-- Réfléchir à la partie payante 15$ par année par utilisateur
-    - Section livre style Buddy colo
-    - Bibliothèque plus de 5 palettes enregistrées (donc 6 et + ont être dans la version premium)
+- Corriger le CSS pour faire apparaître la flèche rouge
+- Corriger le CSS pour faire l'intérieur du dropdown : rouge texte blanc, hover : blanc, texte rouge
+- Écrire Harmonies de couleurs à gauche du dropdown
+- Faire la section bibliothèque
+
+Trouver et faire des templates sur https://www.jotform.com/fr/form-templates/
+- Se connecter
+- S'inscrire
+- Profil
+- Contact
+- Mot de passe oublié
+- Confirmation d'email
+
+- Faire ma bibliothèque de couleurs
 
 ----------------------------
 Prochaine rencontre BriBri TO DO LIST
-- Faire les harmonies de couleurs
-- Faire un bouton stepper (flèche haut et bas pour augmenter/dimuner la quantité) 1 à 8 couleurs
-- Faire un dropdown harmonie de couleurs
-- Faire le bouton pour reload la page
-- Faire le bouton confirmer les settings
-
+- 
 ----------------------------
 Autre rencontre BriBri TO DO LIST
 - Créer bibliotheque : les gens doivent pouvoir mettre un nom à chaque palette, maximum 5 palettes
 - Créer profil/se connecter/s'inscrire
+- Faire fonctionne les harmonies de couleurs
 
 ----------------------------
 Idées versions payantes

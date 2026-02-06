@@ -9,8 +9,9 @@
 <body>
     <div class="menu-float">
         <a href="index.html">Accueil</a>
-        <a href="#">Générer une nouvelle palette</a>
         <a href="biblio.html">Bibliothèques</a>
+        <a id="bouton-generer-scroll">Générer une nouvelle palette</a>
+        <a href="#">Voir les options</a>
     </div>
     <header>
         <nav>
@@ -32,23 +33,10 @@
         <section>
             <div class="menu-filtres">
                 <div class="filtres">
-                    
                     <div class="dropdown">
-                        <a href="#" class="trigger harmonie-trigger">
-                            Harmonies de couleurs
-                            <span class="icone-fleche"></span>
-                        </a>
-                        
-                        <div class="harmonie-couleurs" id="harmonie-couleurs">
-                            <a href="#">Aléatoire</a>
-                            <a href="#">Analogue</a>
-                            <a href="#">Monochrome</a>
-                            <a href="#">Triade (3)</a>
-                            <a href="#">Complémentaire (2)</a>
-                            <a href="#">Complémentaire adjacent (3)</a>
-                            <a href="#">Tétrade (4)</a>
-                            <a href="#">Carré (4)</a>
-                        </div>
+                        <label for="icone-fleche">Harmonies de couleurs</label>
+
+                        <select class="harmonies-couleurs" id="harmonies-couleurs"></select>
                     </div>
 
                     <div class="nb-couleurs" id="nb-couleurs">
@@ -60,16 +48,15 @@
                         </div>
                     </div>
 
-                    <a href="#" class="bouton-generer" id="bouton-generer">
-                        <img src="images/reload.svg" alt="" class="icone-reload">
-                        Générer une nouvelle palette
-                    </a>
-
                     <div class="checkbox-noir" id="checkbox-noir">
                         <input type="checkbox" id="exclure-noir" name="exclure-noir">
                         <label for="exclure-noir">Exclure le noir</label>
                     </div>
 
+                    <a href="#" class="bouton-generer" id="bouton-generer">
+                        <img src="images/reload.svg" alt="" class="icone-reload">
+                        Générer une nouvelle palette
+                    </a>
                 </div>
             </div>
         </section>
@@ -87,6 +74,6 @@
             <div class="palette-secondaire" id="palette-secondaire"></div>
         </section>
     </main>
-    <script src="script.js"></script> <!-- Ligne qui lie la feuille js (script.js) au HTML -->
+    <script src="js/script_generateur.js"></script> <!-- Ligne qui lie la feuille js (script.js) au HTML -->
 </body>
 </html>
